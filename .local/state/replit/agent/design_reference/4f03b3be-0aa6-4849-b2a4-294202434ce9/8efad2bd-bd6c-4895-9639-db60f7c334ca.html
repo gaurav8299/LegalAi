@@ -1,0 +1,652 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalAI Pro - AI-Powered Legal Consultation Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'legal-navy': '#1E3A8A',
+                        'legal-blue': '#3B82F6',
+                        'legal-gold': '#F59E0B',
+                        'legal-gray': '#64748B'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- @COMPONENT: Header [navigation, logo, mobile menu] -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-balance-scale text-legal-gold text-2xl mr-3"></i>
+                        <span class="text-legal-navy font-bold text-xl">LegalAI Pro</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-legal-navy hover:text-legal-blue transition-colors duration-300 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#services" class="text-legal-gray hover:text-legal-blue transition-colors duration-300 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="#ai-chat" class="text-legal-gray hover:text-legal-blue transition-colors duration-300 px-3 py-2 text-sm font-medium">AI Chat</a>
+                        <a href="#resources" class="text-legal-gray hover:text-legal-blue transition-colors duration-300 px-3 py-2 text-sm font-medium">Resources</a>
+                        <a href="#contact" class="text-legal-gray hover:text-legal-blue transition-colors duration-300 px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <button class="bg-legal-blue hover:bg-legal-navy text-white px-6 py-2 rounded-lg transition-colors duration-300 font-medium">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-legal-navy hover:text-legal-blue focus:outline-none focus:text-legal-blue">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <!-- @COMPONENT: Hero Section [main value proposition, CTA] -->
+    <section id="home" class="relative bg-gradient-to-br from-legal-navy via-blue-900 to-legal-blue min-h-screen flex items-center">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <!-- Professional legal consultation background image -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                    AI-Powered Legal
+                    <span class="text-legal-gold">Consultation</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                    Get instant legal guidance powered by advanced AI. Professional, reliable, and available 24/7 for all your legal questions.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                    <button class="bg-legal-gold hover:bg-yellow-500 text-legal-navy px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-robot mr-2"></i>
+                        Start AI Consultation
+                    </button>
+                    <button class="bg-transparent border-2 border-white hover:bg-white hover:text-legal-navy text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+                        <i class="fas fa-play mr-2"></i>
+                        Watch Demo
+                    </button>
+                </div>
+                
+                <!-- Trust indicators -->
+                <div class="flex flex-wrap justify-center items-center gap-8 text-gray-300">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-legal-gold mr-2"></i>
+                        <span>Secure & Confidential</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-legal-gold mr-2"></i>
+                        <span>24/7 Available</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-legal-gold mr-2"></i>
+                        <span>AI-Powered Accuracy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Legal Categories [service offerings] -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-legal-navy mb-4">Legal Expertise Areas</h2>
+                <p class="text-xl text-legal-gray max-w-3xl mx-auto">Our AI is trained in multiple areas of law to provide comprehensive legal guidance</p>
+            </div>
+            
+            <!-- @MAP: legalCategories.map(category => ( -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-100">
+                    <div class="text-legal-blue text-4xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-legal-navy mb-3">Family Law</h3>
+                    <p class="text-legal-gray mb-4">Divorce, custody, adoption, and domestic relations guidance</p>
+                    <button class="text-legal-blue hover:text-legal-navy font-medium transition-colors duration-300">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-green-100">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-legal-navy mb-3">Property Law</h3>
+                    <p class="text-legal-gray mb-4">Real estate transactions, property disputes, and ownership issues</p>
+                    <button class="text-green-600 hover:text-green-800 font-medium transition-colors duration-300">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-purple-100">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-legal-navy mb-3">Employment Law</h3>
+                    <p class="text-legal-gray mb-4">Workplace rights, discrimination, and employment contracts</p>
+                    <button class="text-purple-600 hover:text-purple-800 font-medium transition-colors duration-300">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-red-50 to-rose-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-red-100">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-legal-navy mb-3">Criminal Law</h3>
+                    <p class="text-legal-gray mb-4">Criminal defense, charges, and legal representation guidance</p>
+                    <button class="text-red-600 hover:text-red-800 font-medium transition-colors duration-300">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100">
+                    <div class="text-orange-600 text-4xl mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-legal-navy mb-3">Business Law</h3>
+                    <p class="text-legal-gray mb-4">Corporate formation, contracts, and business compliance</p>
+                    <button class="text-orange-600 hover:text-orange-800 font-medium transition-colors duration-300">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-teal-100">
+                    <div class="text-teal-600 text-4xl mb-4">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-legal-navy mb-3">Contract Law</h3>
+                    <p class="text-legal-gray mb-4">Contract review, negotiations, and legal obligations</p>
+                    <button class="text-teal-600 hover:text-teal-800 font-medium transition-colors duration-300">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Legal Categories -->
+
+    <!-- @COMPONENT: AI Chat Interface [main feature showcase] -->
+    <section id="ai-chat" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-legal-navy mb-4">AI Legal Assistant</h2>
+                <p class="text-xl text-legal-gray max-w-3xl mx-auto">Get instant answers to your legal questions with our advanced AI-powered consultation system</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Chat Interface -->
+                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+                    <div class="bg-legal-navy text-white p-6 flex items-center">
+                        <div class="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                        <span class="font-semibold">LegalAI Assistant - Online</span>
+                        <div class="ml-auto flex items-center text-sm">
+                            <i class="fas fa-shield-alt mr-1"></i>
+                            Encrypted
+                        </div>
+                    </div>
+                    
+                    <div class="h-96 p-6 overflow-y-auto bg-gray-50" data-mock="true">
+                        <!-- @STATE: messages:array = [] -->
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-legal-blue text-white rounded-lg px-4 py-2 max-w-xs">
+                                    <p class="text-sm">Hello! I'm your AI legal assistant. How can I help you today?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start justify-end">
+                                <div class="bg-gray-200 text-legal-navy rounded-lg px-4 py-2 max-w-xs">
+                                    <p class="text-sm" data-mock="true">I need help with a lease agreement dispute</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-legal-blue text-white rounded-lg px-4 py-2 max-w-sm">
+                                    <p class="text-sm">I can help you with lease agreement issues. This falls under Property Law. Can you provide more details about the specific dispute?</p>
+                                    <div class="mt-2 text-xs opacity-75">
+                                        <i class="fas fa-brain mr-1"></i>
+                                        Confidence: 94%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 border-t border-gray-200 bg-white">
+                        <div class="flex space-x-3">
+                            <input type="text" placeholder="Type your legal question..." class="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-legal-blue focus:border-legal-blue outline-none" data-implementation="Should connect to OpenAI API" />
+                            <button class="bg-legal-blue hover:bg-legal-navy text-white px-6 py-3 rounded-lg transition-colors duration-300" data-event="click:sendMessage">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <p class="text-xs text-legal-gray mt-2">
+                            <i class="fas fa-info-circle mr-1"></i>
+                            This AI provides general legal information only. Consult a licensed attorney for specific legal advice.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Features -->
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="bg-legal-gold text-white rounded-lg p-3 mr-4">
+                            <i class="fas fa-bolt text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-legal-navy mb-2">Instant Responses</h3>
+                            <p class="text-legal-gray">Get immediate answers to your legal questions powered by advanced AI technology trained on extensive legal databases.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-legal-blue text-white rounded-lg p-3 mr-4">
+                            <i class="fas fa-brain text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-legal-navy mb-2">Smart Classification</h3>
+                            <p class="text-legal-gray">Our AI automatically categorizes your question and provides specialized guidance based on the relevant area of law.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-green-600 text-white rounded-lg p-3 mr-4">
+                            <i class="fas fa-history text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-legal-navy mb-2">Conversation History</h3>
+                            <p class="text-legal-gray">Keep track of all your consultations with secure conversation history and follow-up question support.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-purple-600 text-white rounded-lg p-3 mr-4">
+                            <i class="fas fa-percentage text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-legal-navy mb-2">Confidence Scoring</h3>
+                            <p class="text-legal-gray">Each response includes a confidence score to help you understand the reliability of the AI guidance provided.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AI Chat Interface -->
+
+    <!-- @COMPONENT: Statistics Section [trust building] -->
+    <section class="py-16 bg-legal-navy">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="text-white">
+                    <div class="text-4xl font-bold text-legal-gold mb-2" data-bind="stats.consultations">50,000+</div>
+                    <div class="text-lg text-gray-300">AI Consultations</div>
+                </div>
+                <div class="text-white">
+                    <div class="text-4xl font-bold text-legal-gold mb-2" data-bind="stats.accuracy">94%</div>
+                    <div class="text-lg text-gray-300">Accuracy Rate</div>
+                </div>
+                <div class="text-white">
+                    <div class="text-4xl font-bold text-legal-gold mb-2" data-bind="stats.response_time">2.3s</div>
+                    <div class="text-lg text-gray-300">Avg Response Time</div>
+                </div>
+                <div class="text-white">
+                    <div class="text-4xl font-bold text-legal-gold mb-2" data-bind="stats.satisfaction">4.8/5</div>
+                    <div class="text-lg text-gray-300">User Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Statistics Section -->
+
+    <!-- @COMPONENT: Resources Section [legal library, FAQ] -->
+    <section id="resources" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-legal-navy mb-4">Legal Resources</h2>
+                <p class="text-xl text-legal-gray max-w-3xl mx-auto">Access comprehensive legal information, guides, and frequently asked questions</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- FAQ Section -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-legal-navy mb-6">Frequently Asked Questions</h3>
+                    <div class="space-y-4">
+                        <!-- @MAP: faqs.map(faq => ( -->
+                        <div class="border border-gray-200 rounded-lg" data-mock="true">
+                            <button class="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-legal-blue" data-event="click:toggleFAQ">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium text-legal-navy">How accurate is the AI legal advice?</span>
+                                    <i class="fas fa-chevron-down text-legal-gray"></i>
+                                </div>
+                            </button>
+                            <div class="hidden px-6 pb-6 text-legal-gray">
+                                Our AI provides 94% accuracy in legal information delivery, but it's important to note that this is general guidance and not a substitute for professional legal counsel.
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg" data-mock="true">
+                            <button class="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-legal-blue" data-event="click:toggleFAQ">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium text-legal-navy">Is my consultation confidential?</span>
+                                    <i class="fas fa-chevron-down text-legal-gray"></i>
+                                </div>
+                            </button>
+                            <div class="hidden px-6 pb-6 text-legal-gray">
+                                Yes, all consultations are encrypted and confidential. We follow strict data privacy protocols and comply with legal confidentiality standards.
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg" data-mock="true">
+                            <button class="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-legal-blue" data-event="click:toggleFAQ">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium text-legal-navy">When should I consult a human lawyer?</span>
+                                    <i class="fas fa-chevron-down text-legal-gray"></i>
+                                </div>
+                            </button>
+                            <div class="hidden px-6 pb-6 text-legal-gray">
+                                For complex cases, court representation, or when you need legally binding advice, we recommend consulting with a licensed attorney in your jurisdiction.
+                            </div>
+                        </div>
+                        <!-- @END_MAP )) -->
+                    </div>
+                </div>
+                
+                <!-- Legal Library -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-legal-navy mb-6">Legal Resource Library</h3>
+                    <!-- Modern justice scales in a law office -->
+                    <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Legal books and scales of justice" class="rounded-xl shadow-lg w-full h-48 object-cover mb-6" />
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors duration-300 cursor-pointer">
+                            <i class="fas fa-file-alt text-legal-blue text-xl mr-4"></i>
+                            <div>
+                                <h4 class="font-medium text-legal-navy">Legal Forms Templates</h4>
+                                <p class="text-sm text-legal-gray">Download commonly used legal document templates</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors duration-300 cursor-pointer">
+                            <i class="fas fa-book text-green-600 text-xl mr-4"></i>
+                            <div>
+                                <h4 class="font-medium text-legal-navy">Legal Guides</h4>
+                                <p class="text-sm text-legal-gray">Comprehensive guides for various legal processes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors duration-300 cursor-pointer">
+                            <i class="fas fa-search text-purple-600 text-xl mr-4"></i>
+                            <div>
+                                <h4 class="font-medium text-legal-navy">Case Law Database</h4>
+                                <p class="text-sm text-legal-gray">Search through relevant case law and precedents</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors duration-300 cursor-pointer">
+                            <i class="fas fa-phone text-orange-600 text-xl mr-4"></i>
+                            <div>
+                                <h4 class="font-medium text-legal-navy">Emergency Contacts</h4>
+                                <p class="text-sm text-legal-gray">24/7 emergency legal assistance contacts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Resources Section -->
+
+    <!-- @COMPONENT: Contact Section [professional contact info] -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-legal-navy to-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get Professional Legal Support</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Need more than AI assistance? Connect with our network of qualified legal professionals</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                    <h3 class="text-2xl font-semibold text-legal-navy mb-6">Request Professional Consultation</h3>
+                    <form class="space-y-6" data-implementation="Should validate and submit to backend">
+                        <div>
+                            <label class="block text-sm font-medium text-legal-gray mb-2">Full Name</label>
+                            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-legal-blue focus:border-legal-blue outline-none" data-bind="form.name" />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-legal-gray mb-2">Email Address</label>
+                            <input type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-legal-blue focus:border-legal-blue outline-none" data-bind="form.email" />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-legal-gray mb-2">Legal Area</label>
+                            <select class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-legal-blue focus:border-legal-blue outline-none" data-bind="form.legalArea">
+                                <option>Select legal area...</option>
+                                <option>Family Law</option>
+                                <option>Property Law</option>
+                                <option>Employment Law</option>
+                                <option>Criminal Law</option>
+                                <option>Business Law</option>
+                                <option>Contract Law</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-legal-gray mb-2">Case Description</label>
+                            <textarea rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-legal-blue focus:border-legal-blue outline-none" placeholder="Please describe your legal situation..." data-bind="form.description"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-legal-blue hover:bg-legal-navy text-white py-3 rounded-lg font-semibold transition-colors duration-300" data-event="click:submitConsultationRequest">
+                            Request Consultation
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="text-white space-y-8">
+                    <!-- Professional law office interior -->
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Modern law office with professional atmosphere" class="rounded-xl shadow-lg w-full h-48 object-cover" />
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-legal-gold text-legal-navy rounded-lg p-3 mr-4">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Office Location</h4>
+                                <p class="text-gray-300">123 Legal District, Suite 456<br />Professional Plaza, NY 10001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-legal-gold text-legal-navy rounded-lg p-3 mr-4">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Phone Support</h4>
+                                <p class="text-gray-300">+1 (555) 123-LEGAL<br />Available 24/7 for emergencies</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-legal-gold text-legal-navy rounded-lg p-3 mr-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Email Contact</h4>
+                                <p class="text-gray-300">support@legalai-pro.com<br />Response within 2 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-legal-gold text-legal-navy rounded-lg p-3 mr-4">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Business Hours</h4>
+                                <p class="text-gray-300">Monday - Friday: 8:00 AM - 8:00 PM<br />Weekend: Emergency only</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer [professional footer with links] -->
+    <footer class="bg-legal-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-balance-scale text-legal-gold text-2xl mr-3"></i>
+                        <span class="text-xl font-bold">LegalAI Pro</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        Professional AI-powered legal consultation platform providing instant, reliable legal guidance across multiple practice areas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-legal-gold transition-colors duration-300">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-legal-gold transition-colors duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-legal-gold transition-colors duration-300">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-legal-gold transition-colors duration-300">Family Law</a></li>
+                        <li><a href="#" class="hover:text-legal-gold transition-colors duration-300">Property Law</a></li>
+                        <li><a href="#" class="hover:text-legal-gold transition-colors duration-300">Employment Law</a></li>
+                        <li><a href="#" class="hover:text-legal-gold transition-colors duration-300">Criminal Law</a></li>
+                        <li><a href="#" class="hover:text-legal-gold transition-colors duration-300">Business Law</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-legal-gold transition-colors duration-300">Help Center</a></li>
+                        <li><a href="#" class="hover:text-legal-gold transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-legal-gold transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-legal-gold transition-colors duration-300">Legal Disclaimer</a></li>
+                        <li><a href="#" class="hover:text-legal-gold transition-colors duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 LegalAI Pro. All rights reserved. This platform provides general legal information only and does not constitute legal advice.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- @FUNCTIONALITY: Add smooth scrolling and interactive elements -->
+    <script>
+        (function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // FAQ toggle functionality
+            document.querySelectorAll('[data-event*="toggleFAQ"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    if (content.classList.contains('hidden')) {
+                        content.classList.remove('hidden');
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        content.classList.add('hidden');
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+
+            // Animated statistics on scroll
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // TODO: Implement counter animation for statistics
+                        console.log('Stats section visible - animate counters');
+                    }
+                });
+            }, observerOptions);
+
+            const statsSection = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-4');
+            if (statsSection) {
+                statsObserver.observe(statsSection.parentElement);
+            }
+
+            // Form submission placeholder
+            document.querySelectorAll('[data-event*="submitConsultationRequest"]').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement form validation and API submission
+                    alert('Consultation request submitted successfully! (This is a demo)');
+                });
+            });
+
+            // Chat message sending placeholder
+            document.querySelectorAll('[data-event*="sendMessage"]').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement OpenAI API integration for chat
+                    console.log('Send message to AI - integrate with OpenAI API');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
